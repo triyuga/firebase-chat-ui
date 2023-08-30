@@ -2,6 +2,8 @@
 
 This demo application is built using firebase, as a means of exploring and demonstrating the capabilities of that platform.
 
+Repo for this project here: https://github.com/triyuga/firebase-chat-ui
+
 ## Features
 
 * Auth
