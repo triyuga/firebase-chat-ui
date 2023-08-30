@@ -1,11 +1,10 @@
-import { useAuthState } from 'react-firebase-hooks/auth'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from 'contexts/AppContext'
-import './App.scss'
 import { SignIn } from 'components/SignIn'
 import { SignOut } from 'components/SignOut'
-import { ChatRoom } from 'components/ChatRoom'
+import { ChatRoom } from 'pages/ChatRoom/ChatRoom'
+import './App.scss'
 
 const router = createBrowserRouter([
     {
@@ -15,17 +14,16 @@ const router = createBrowserRouter([
 ])
 
 export function App() {
-    const { auth } = useContext(AppContext)
-    const [user, loading] = useAuthState(auth)
+    const { user, loading } = useContext(AppContext)
 
     return (
         <div className='App'>
             <header>
                 <h1>React Firebase Chat</h1>
-                <SignOut />
+                {user && <SignOut />}
             </header>
             <section>
-                {loading ? <>loading...</> : user ? <RouterProvider router={router} /> : <SignIn />}
+                {loading ? <></> : user ? <RouterProvider router={router} /> : <SignIn />}
             </section>
         </div>
     )

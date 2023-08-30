@@ -1,13 +1,11 @@
-import { useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { AppContext } from 'contexts/AppContext'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useMessages } from 'hooks/useMessages'
 import { ChatMessage } from './ChatMessage'
 
 export function ChatRoom() {
-    const context = useContext(AppContext)
     const scrollRef = useRef<HTMLSpanElement>(null)
     const [formValue, setFormValue] = useState('')
-    const { messages, sendMessage } = useMessages(context)
+    const { messages, sendMessage } = useMessages()
     const messageCount = useMemo(() => messages.length, [messages])
 
     useEffect(() => {
@@ -16,7 +14,6 @@ export function ChatRoom() {
 
     const submitChatForm = async (event: React.SyntheticEvent) => {
         event.preventDefault()
-        event.stopPropagation()
         await sendMessage(formValue)
         setFormValue('')
     }
@@ -24,8 +21,9 @@ export function ChatRoom() {
     return (
         <>
             <main>
-                {messages &&
-                    messages.map(message => <ChatMessage key={message.id} message={message} />)}
+                {messages?.map(message => (
+                    <ChatMessage key={message.id} message={message} />
+                ))}
                 <span ref={scrollRef}></span>
             </main>
 

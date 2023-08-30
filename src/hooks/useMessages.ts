@@ -11,16 +11,18 @@ import {
     SnapshotOptions,
     FirestoreError
 } from 'firebase/firestore'
-import { Message, NewMessage } from '../model/model'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
-import { IAppContext } from 'contexts/AppContext'
+import { AppContext } from 'contexts/AppContext'
+import { Message, NewMessage } from 'domain/models'
+import { useContext } from 'react'
 
-export function useMessages({ db, auth }: IAppContext): {
+export function useMessages(): {
     messages: Message[]
     sendMessage: (text: string) => Promise<void>
     loading: boolean
-    error?: FirestoreError | undefined
+    error?: FirestoreError
 } {
+    const { db, auth } = useContext(AppContext)
     const messagesCollection = collection(db, 'messages').withConverter(messageConverter)
 
     const [messages, loading, error] = useCollectionData(

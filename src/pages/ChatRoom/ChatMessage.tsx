@@ -1,4 +1,4 @@
-import { Message } from 'model/model'
+import { Message } from 'domain/models'
 import { useContext } from 'react'
 import { AppContext } from 'contexts/AppContext'
 
@@ -9,7 +9,6 @@ interface ChatMessageProps {
 export function ChatMessage({ message }: ChatMessageProps) {
     const { auth } = useContext(AppContext)
     const { text, uid, photoURL } = message
-
     const messageClass = uid === auth.currentUser?.uid ? 'sent' : 'received'
 
     return (
