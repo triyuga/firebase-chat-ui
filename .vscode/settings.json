@@ -2,5 +2,8 @@
     "editor.tabCompletion": "on",
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[markdown]": {
+        "editor.formatOnSave": false
+    }
 }
