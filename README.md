@@ -1,6 +1,6 @@
 # Firebase Chat UI demo
 
-This demo application is built using firebase, as a means of exploring and demonstrating the capabilities of that platform.
+This demo application is built using [Firebase](https://firebase.google.com/), as a means of exploring and demonstrating the capabilities of that platform.
 
 Repo for this project here: https://github.com/triyuga/firebase-chat-ui
 
@@ -17,6 +17,8 @@ Some ideas about what to add next
 * A Firestorm function app
 * An additional, nested data model, using [subcollections](https://firebase.google.com/docs/firestore/data-model#subcollections)
 * Other ideas from [100 Firebase Tips, Tricks, and Screw-ups](https://www.youtube.com/watch?v=iWEgpdVSZyg&ab_channel=Fireship)
+* Move firebase config into environment config files
+* Deploy the app to 2 or more environments: `dev` and `prod`
 * ...
 
 ## React App
