@@ -1,4 +1,5 @@
-# Midwife Schedule Link
+# Midwife Schedule Link 
+## Example React Project structure for Tharaka
 
 ## Getting started
 
