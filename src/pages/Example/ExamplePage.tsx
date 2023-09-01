@@ -1,20 +1,20 @@
 import { useContext, useEffect, useState } from 'react'
 import { AppContext } from 'contexts/AppContext'
-import styles from './Example.module.scss'
+import styles from './ExamplePage.module.scss'
 import classNames from 'classnames'
-import { NestedComponent } from './NestedComponent/NestedComponent'
+import { NestedComponent } from './components/NestedComponent/NestedComponent'
 import { Data } from 'domain/models'
 import { DataService } from 'domain/services/DataService'
 
-interface ExampleProps {
+interface ExamplePageProps {
     greeting: string
     count: number
     className?: string
 }
 
-export function Example({ greeting, count, className }: ExampleProps) {
+export function ExamplePage({ greeting, count, className }: ExamplePageProps) {
     const { auth } = useContext(AppContext)
-    const { data, handleButtonClick } = useExampleViewModel()
+    const { data, handleButtonClick } = useExamplePageViewModel()
 
     return (
         <div className={classNames(styles.root, !!className && className)}>
@@ -30,7 +30,7 @@ export function Example({ greeting, count, className }: ExampleProps) {
     )
 }
 
-const useExampleViewModel = () => {
+const useExamplePageViewModel = () => {
     const [data, setData] = useState<Data>([])
 
     const fetchData = async () => {

@@ -19,11 +19,12 @@ Some ideas about what to add next
 * Other ideas from [100 Firebase Tips, Tricks, and Screw-ups](https://www.youtube.com/watch?v=iWEgpdVSZyg&ab_channel=Fireship)
 * Move firebase config into environment config files
 * Deploy the app to 2 or more environments: `dev` and `prod`
+* Infrastructure as code for firebase?
 * ...
 
 ## React App
 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with the [typescript template](https://create-react-app.dev/docs/adding-typescript/)
-* I have [enabled absolute imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
-* I am using [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/) with [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+* I have [enabled absolute imports](https://create-react-app.dev/docs/importing-a-component/#absolute-imports) so the import links are nice and clean
+* I am using [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/) with [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) for styling
 * I have enabled prettier via [.prettierrc](./.prettierrc), [.vscode/settings.json](./.vscode/settings.json), and the [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) VS Code extension
