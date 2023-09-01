@@ -5,7 +5,7 @@ import { SignIn } from 'components/SignIn/SignIn'
 import { SignOut } from 'components/SignOut/SignOut'
 import { ChatRoom } from 'pages/ChatRoom/ChatRoom'
 import './App.scss'
-import { ExamplePage } from 'pages/Example/ExamplePage'
+import { ExamplePage } from 'pages/ExamplePage/ExamplePage'
 import { NestedContextProvider } from 'contexts/NestedContext'
 
 const router = createBrowserRouter([
