@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useMessages } from 'hooks/useMessages'
-import { ChatMessage } from './ChatMessage'
+import { ChatMessage } from './components/ChatMessage'
 
 export function ChatRoom() {
     const scrollRef = useRef<HTMLSpanElement>(null)
     const [formValue, setFormValue] = useState('')
+
     const { messages, sendMessage } = useMessages()
+
     const messageCount = useMemo(() => messages.length, [messages])
 
     useEffect(() => {

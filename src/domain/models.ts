@@ -9,3 +9,5 @@ export interface Message {
 }
 
 export type NewMessage = Omit<Message, 'id'>
+
+export type Data = string[]
