@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "fir-rpg-chat"
+  },
+  "targets": {
+    "fir-rpg-chat": {
+      "hosting": {
+        "app": [
+          "rpg-chat-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
