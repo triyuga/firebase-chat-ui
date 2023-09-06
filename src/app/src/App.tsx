@@ -14,7 +14,7 @@ const router = createBrowserRouter([
 ])
 
 export function App() {
-    const { user, loading } = useContext(FirebaseAppContext)
+    const { user, userIsLoading } = useContext(FirebaseAppContext)
 
     return (
         <div className='App'>
@@ -23,7 +23,7 @@ export function App() {
                 {user && <SignOut />}
             </header>
             <section>
-                {loading ? <></> : user ? <RouterProvider router={router} /> : <SignIn />}
+                {userIsLoading ? <></> : user ? <RouterProvider router={router} /> : <SignIn />}
             </section>
         </div>
     )
